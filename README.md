@@ -38,7 +38,7 @@ val S3_BUCKET = config['AWS_S3']['S3_BUCKET']
 
 ```
 
-### Initiate Spark Session
+## Initiate Spark Session
 
 * Following packages/jars are needed to enable Snowflake connector and AWS connections. 
 * They will be pulled from Maven Repository during Spark session initiation. https://repo1.maven.org/maven2/
@@ -59,7 +59,7 @@ spark = SparkSession \
     .getOrCreate()
 ```
 
-##### *Note: Snowflake USER account should have CREATE STAGE privileges on the schema/tables which are being queried. Because Snowflake connector stages the data during querying. Otherwise Spark throws error saying "Insufficient authorization privileges"*
+##### *Note: Snowflake USER account should have CREATE STAGE privileges on the schema/tables which are being queried. Because Snowflake     connector stages the data during querying. Otherwise Spark throws error saying "Insufficient authorization privileges"*
 
 ### Set AWS credentials
 
